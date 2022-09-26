@@ -66,7 +66,7 @@ class SleepTrackerFragment : Fragment() {
 
         // make sure data variable is added to the xml to bind
         binding.sleepTrackerViewModel = sleepTrackerViewModel
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
 
         sleepTrackerViewModel.showSnackBarEvent.observe(viewLifecycleOwner, Observer {
             if (it == true) {
