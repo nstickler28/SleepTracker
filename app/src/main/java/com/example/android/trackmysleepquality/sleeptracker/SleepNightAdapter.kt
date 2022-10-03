@@ -10,7 +10,6 @@ import com.example.android.trackmysleepquality.convertDurationToFormatted
 import com.example.android.trackmysleepquality.convertNumericQualityToString
 import com.example.android.trackmysleepquality.database.SleepNight
 import com.example.android.trackmysleepquality.databinding.ListItemSleepNightBinding
-import com.example.android.trackmysleepquality.generated.callback.OnClickListener
 
 class SleepNightAdapter(val clickListener: SleepNightListener) : ListAdapter<SleepNight,
         SleepNightAdapter.ViewHolder>(SleepNightDiffCallback()) {
@@ -26,7 +25,7 @@ class SleepNightAdapter(val clickListener: SleepNightListener) : ListAdapter<Sle
         : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: SleepNight, clickListener: SleepNightListener) {
-           binding.sleep = item
+            binding.sleep = item
             binding.clickListener = clickListener
             binding.executePendingBindings()
         }
